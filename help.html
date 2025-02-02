@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>help center</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="blog.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 800px)"
+      href="response.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+      .banner-content h1 {
+        color: honeydew;
+        font-size: 50px;
+        text-shadow: 1.5px 1.5px lightslategray;
+        margin-top: 10px;
+      }
+      .banner-content h3 {
+        color: honeydew;
+        /* font-size: 35px; */
+        text-shadow: 1.5px 1.5px lightslategray;
+        margin-top: 10px;
+      }
+      .banner-content {
+        position: absolute;
+        top: 17vh;
+        left: 33vw;
+      }
+      .help-content {
+        background-color: #0a0d14;
+      }
+      .help-para h1 {
+        color: aliceblue;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 40px;
+      }
+      .help-para p {
+        color: aliceblue;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 30px;
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #fff;
+        font-size: 18px;
+      }
+
+      input,
+      textarea {
+        width: 85vh;
+        padding: 13px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+      }
+      input[type="text"]:focus {
+        background-color: lightgrey;
+      }
+      input[type="tel"]:focus {
+        background-color: lightgrey;
+      }
+      input[type="email"]:focus {
+        background-color: lightgrey;
+      }
+
+      .head {
+        padding: 0 0 22px 0;
+      }
+      button {
+        padding: 15px 20px;
+        font-size: 18px;
+        color: #fff;
+        /* background: dimgray; */
+        background: transparent;
+        border: solid whitesmoke;
+        border-radius: 4px;
+      }
+
+      button:hover {
+        background: #20242f;
+        color: #fff;
+      }
+      .main-help {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <div class="logo">
+          <p>Wanderlust Journeys</p>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="signin.html">Sign-in</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="banner-section">
+        <div class="banner-image">
+          <img src="blog-bg5.png" alt="banner-image" />
+        </div>
+        <div class="banner-content" id="main-banner">
+          <h1>HELP CENTER</h1>
+          <h3>Send me your questions,comments or suggestions!</h3>
+        </div>
+      </div>
+
+      <div class="help-content">
+        <div class="help-para">
+          <br />
+          <!-- <h1>GET IN TOUCH</h1> -->
+          <h1>Contact Form</h1>
+          <p>——Feel Free to Contact Us——</p>
+          <br />
+        </div>
+        <div class="main-help">
+          <form id="helpForm">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              placeholder="Enter your Name"
+              id="name"
+              required
+            />
+
+            <label for="mobile">Mobile No.</label>
+            <input
+              type="tel"
+              placeholder="Enter your mobile no."
+              id="mobile"
+              required
+            />
+
+            <label for="name">Subject</label>
+            <input
+              type="text"
+              placeholder="Enter your Subject"
+              id="name"
+              required
+            />
+
+            <label for="email">Your Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              id="email"
+              required
+            />
+
+            <label for="issue">Describe Your Issue</label>
+            <textarea id="issue" rows="4" required></textarea>
+            <div class="select">
+              <button type="button" onclick="submitForm()">Submit</button>
+            </div>
+            <br /><br />
+          </form>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="footer">
+          <div class="row">
+            <div class="footer-col">
+              <h4>About us</h4>
+              <ul>
+                <li><a href="#">our services</a></li>
+                <li><a href="#">privacy policy</a></li>
+                <li>
+                  <a href="dheradun.html">our best blog</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>get help</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="help.html">Help Center</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Contact us</h4>
+              <ul>
+                <li><a href="#">+91 1234567890</a></li>
+                <li>
+                  <a href="https://mail.google.com/">blog9463@gmail.com</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Follow us</h4>
+              <div class="social-links">
+                <a href="https://www.facebook.com/#"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+
+                <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="https://in.linkedin.com/"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

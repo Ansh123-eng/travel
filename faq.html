@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 800px)"
+      href="response.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #0a0d14;
+    margin: 0;
+    padding: 0;
+}
+
+.faq-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    background: #007BFF;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background: #f1f1f1;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.arrow {
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.faq-item.active .arrow {
+    transform: rotate(90deg);
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+          <div class="logo">
+            <p>Wanderlust Journeys</p>
+          </div>
+          <div class="menu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="signin.html">Sign-in</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="banner-section">
+          <div class="banner-image">
+            <img src="help-bg1.avif" alt="banner-image" />
+          </div>
+          <div class="banner-content" id="main-banner">
+            <h1>FAQ</h1>
+            <h3>Frequently Asked Questions</h3>
+          </div>
+        </div>
+  
+    <div class="faq-container">
+        <h1>Feel Free to Ask</h1>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(0)">
+                <span>What is the best time to travel?</span>
+                <span class="arrow">➔</span>
+            </div>
+            <div class="faq-answer" id="answer-0">
+                The best time to travel depends on your destination. Generally, spring and fall are ideal for most places due to pleasant weather and fewer crowds.
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(1)">
+                <span>How can I find the cheapest flights?</span>
+                <span class="arrow">➔</span>
+            </div>
+            <div class="faq-answer" id="answer-1">
+                To find the cheapest flights, book early, be flexible with your dates, and use comparison websites or apps to search for deals.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(2)">
+                <span>What should I pack for my trip?</span>
+                <span class="arrow">➔</span>
+            </div>
+            <div class="faq-answer" id="answer-2">
+                Packing essentials include weather-appropriate clothing, travel documents, toiletries, and any specific items needed for your destination.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(3)">
+                <span>Do I need travel insurance?</span>
+                <span class="arrow">➔</span>
+            </div>
+            <div class="faq-answer" id="answer-3">
+                Travel insurance is recommended as it covers unexpected events like trip cancellations, medical emergencies, and lost luggage.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(4)">
+                <span>How do I book accommodations?</span>
+                <span class="arrow">➔</span>
+            </div>
+            <div class="faq-answer" id="answer-4">
+                You can book accommodations online through travel websites, apps, or directly with hotels. It's best to read reviews and compare prices before booking.
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+
+    <script>
+        function toggleAnswer(index) {
+    const answer = document.getElementById(`answer-${index}`);
+    const item = answer.parentElement;
+
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
+        item.classList.remove('active');
+    } else {
+        answer.style.display = "block";
+        item.classList.add('active');
+    }
+}
+
+    </script>
+</body>
+</html>

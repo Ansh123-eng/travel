@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="blog.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 800px)"
+      href="response.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <style>
+    .bookmark-icon {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background-color: black;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 50px;
+      cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .bookmark-icon i {
+      color: white; /* Default color */
+    }
+
+    .bookmark-icon.bookmarked i {
+      color: yellow; /* Color when bookmarked */
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <div class="logo">
+          <!-- <img src="lo.png" alt="logo"> -->
+          <p>Wanderlust Journeys</p>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="signin.html">Sign-in</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="banner-section">
+        <div class="banner-image">
+          <img src="blog-bg5.png" alt="banner-image" />
+        </div>
+        <div class="banner-content" id="main-banner">
+          <h1>BLOG</h1>
+          <h2>Explore • Plan • Travel</h2>
+        </div>
+      </div>
+      <div class="gallery" id="gallery-section">
+        <div class="section-row">
+          <h2>Blog Posts</h2>
+        </div>
+        <div class="search">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search..."
+            oninput="filterGallery()"
+          />
+        </div>
+      </div>
+      <div class="main">
+        <div class="wrapper">
+          <div class="image">
+            <a href="nanital.html"
+              ><img src="nanital.jpg" alt="ooty" height="500px"
+            />
+            <div class="content">
+              <h1>NAINITAL</h1>
+              <p>
+                Nainital, often referred to as the "Lake District of India," is
+                a picturesque hill station nestled in the Kumaon region of
+                Uttarakhand, situated at an elevation of about 2,084 meters
+                (6,837 feet) above sea level. The town is built around a serene
+                crescent-shaped lake, Naini Lake, which is dotted with vibrant
+                pedal boats and surrounded by lush green hills, making it a
+                favorite destination for nature lovers and adventure seekers.
+                Nainital's lush landscapes, crystal-clear waters, and cool
+                climate offer a refreshing escape from the sweltering heat of
+                the plains, attracting tourists year-round.
+              </p>
+              <!-- Bookmark icon -->
+              <span
+                class="bookmark-icon"
+                data-place="Nainital"
+                onclick="toggleBookmark(this)"
+              >
+                <i class="fa fa-star"></i>
+              </span>
+            </div>
+          </div></a>
+          <h2>NAINITAL</h2>
+        </div>
+
+        <div class="wrapper1">
+          <div class="image">
+            <a href="almora.html"
+              ><img src="almora.jpg" alt="almora" height="500px"
+            />
+            <div class="content">
+              <h1>ALMORA</h1>
+              <p>
+                Almora, a picturesque hill town nestled in the Kumaon region of
+                Uttarakhand, is renowned for its rich cultural heritage,
+                stunning natural beauty, and serene ambiance. Situated at an
+                altitude of around 1,638 meters (5,374 feet) above sea level,
+                Almora is a popular destination for those seeking an escape from
+                the hustle and bustle of city life. Almora is famous for its
+                breathtaking views of the majestic Himalayan ranges, including
+                the awe-inspiring peaks of Nanda Devi and Trishul. For those
+                interested in experiencing the town's cultural offerings, the
+                annual Uttarakhand Diwas celebrations, held in November, are a
+                must-see.
+              </p>
+              <span
+                class="bookmark-icon"
+                data-place="Almora"
+                onclick="toggleBookmark(this)"
+              >
+                <i class="fa fa-star"></i>
+              </span>
+            </div>
+          </div></a>
+          <h2>ALMORA</h2>
+        </div>
+
+        <div class="wrapper2">
+          <div class="image">
+            <a href="dheradun.html"
+              ><img src="dheradun1.avif" alt="ooty" height="500px"
+            />
+            <div class="content2">
+              <h1>DHERADUN</h1>
+              <p>
+                Sikkim, a small yet enchanting state nestled in the northeastern
+                region of India, is renowned for its breathtaking landscapes,
+                rich biodiversity, and vibrant culture. Surrounded by the
+                majestic Himalayas, Sikkim is home to the third-highest peak in
+                the world, Kanchenjunga, which serves as a backdrop to its
+                serene valleys and lush forests. The state's geography is
+                characterized by steep mountains, cascading rivers, and
+                extensive agricultural lands, primarily dedicated to organic
+                farming, including the famous Sikkimese cardamom. Sikkim is also
+                distinguished by its diverse flora and fauna, with numerous
+                protected areas and wildlife sanctuaries.
+              </p>
+              <span
+                class="bookmark-icon"
+                data-place="Dheradun"
+                onclick="toggleBookmark(this)"
+              >
+                <i class="fa fa-star"></i>
+              </span>
+            </div>
+          </div></a>
+          <h2>DHERADUN</h2>
+        </div>
+
+        <div class="wrapper3">
+          <div class="image">
+            <a href="chamoli.html"
+              ><img src="Chamoli1.jpg" alt="ooty" height="500px"
+            />
+            <div class="content3">
+              <h1>CHAMOLI</h1>
+              <p>
+                Nestled amidst the majestic Himalayas, Chamoli is a stunning
+                district in the state of Uttarakhand, India. This enchanting
+                region is renowned for its breathtaking natural beauty, rich
+                cultural heritage, and diverse array of adventure opportunities.
+                Chamoli is home to some of the most iconic landmarks in the
+                Indian Himalayas, including the sacred Badrinath and Kedarnath
+                temples, which attract millions of devotees and tourists each
+                year.The region's rugged terrain, snow-capped peaks, and
+                pristine alpine meadows offer a truly mesmerizing experience for
+                nature enthusiasts and outdoor adventurers.
+              </p>
+              <span
+                class="bookmark-icon"
+                data-place="Chamoli"
+                onclick="toggleBookmark(this)"
+              >
+                <i class="fa fa-star"></i>
+              </span>
+            </div>
+          </div></a>
+          <h2>CHAMOLI</h2>
+        </div>
+
+        <div class="wrapper4">
+          <div class="image">
+            <a href="pithoragarh.html"
+              ><img src="Pithoragarh1.jpg" alt="ooty" height="500px"
+            />
+            <div class="content4">
+              <h1>PITHORAGARH</h1>
+              <p>
+                Nestled amidst the majestic Himalayas, Pithoragarh is a
+                picturesque district in the state of Uttarakhand, India. This
+                enchanting region is renowned for its breathtaking natural
+                beauty, rich cultural heritage, and diverse array of adventure
+                opportunities. Pithoragarh is home to some of the most stunning
+                landscapes in the Indian Himalayas, including the snow-capped
+                peaks of the Kumaon range, pristine alpine meadows, and
+                cascading waterfalls. The region's rugged terrain and remote
+                villages offer a glimpse into the traditional way of life of the
+                local communities, making it a haven for cultural enthusiasts
+                and explorers.
+              </p>
+              <span
+                class="bookmark-icon"
+                data-place="Pithoragarh"
+                onclick="toggleBookmark(this)"
+              >
+                <i class="fa fa-star"></i>
+              </span>
+            </div>
+          </div></a>
+          <h2>PITHORAGARH</h2>
+        </div>
+
+        <div class="wrapper5">
+          <div class="image">
+            <a href="therigarhwal.html"
+              ><img src="Tehri1.jpg" alt="ooty" height="500px"
+            />
+            <div class="content5">
+              <h1>THERIGARHWAL</h1>
+              <p>
+                Therigarhwal is a stunning region located in the northern Indian
+                state of Uttarakhand. Known for its breathtaking natural beauty,
+                rich cultural heritage, and diverse wildlife, Therigarhwal is a
+                true gem of the Himalayas. The best time to visit Therigarhwal
+                is typically during the spring and autumn seasons. The spring
+                months of March to May offer mild temperatures, lush greenery,
+                and the chance to witness the vibrant blooming of
+                wildflowers.The autumn months of September to November, on the
+                other hand, present clear skies, crisp air, and stunning fall
+                foliage that paints the landscape in a mesmerizing array of
+                colors.
+              </p>
+              <span
+                class="bookmark-icon"
+                data-place="Therigarhwal"
+                onclick="toggleBookmark(this)"
+              >
+                <i class="fa fa-star"></i>
+              </span>
+            </div>
+          </div></a>
+          <h2>THERIGARHWAL</h2>
+        </div>
+
+        
+
+      <div class="box">
+        <div class="footer">
+          <div class="row">
+            <div class="footer-col">
+              <h4>About us</h4>
+              <ul>
+                <li><a href="#">our services</a></li>
+                <li><a href="#">privacy policy</a></li>
+                <li>
+                  <a href="dheradun.html">our best blog</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>get help</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="help.html">Help Center</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Contact us</h4>
+              <ul>
+                <li><a href="#">+91 1234567890</a></li>
+                <li>
+                  <a href="https://mail.google.com/">blog9463@gmail.com</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Follow us</h4>
+              <div class="social-links">
+                <a href="https://www.facebook.com/#"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+
+                <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="https://in.linkedin.com/"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleBookmark(element) {
+        const place = element.getAttribute("data-place");
+        let bookmarkedPlaces =
+          JSON.parse(localStorage.getItem("bookmarkedPlaces")) || [];
+
+        if (bookmarkedPlaces.includes(place)) {
+          bookmarkedPlaces = bookmarkedPlaces.filter((item) => item !== place);
+          element.classList.remove("bookmarked");
+        } else {
+          bookmarkedPlaces.push(place);
+          element.classList.add("bookmarked");
+        }
+
+        localStorage.setItem(
+          "bookmarkedPlaces",
+          JSON.stringify(bookmarkedPlaces)
+        );
+        updateBookmarkedList();
+      }
+
+      function initializeBookmarks() {
+        const bookmarkedPlaces =
+          JSON.parse(localStorage.getItem("bookmarkedPlaces")) || [];
+        const bookmarkIcons = document.querySelectorAll(".bookmark-icon");
+
+        bookmarkIcons.forEach(function (icon) {
+          const place = icon.getAttribute("data-place");
+          if (bookmarkedPlaces.includes(place)) {
+            icon.classList.add("bookmarked");
+          }
+        });
+      }
+
+      function updateBookmarkedList() {
+        const bookmarkedPlaces =
+          JSON.parse(localStorage.getItem("bookmarkedPlaces")) || [];
+        const bookmarkListContainer = document.getElementById(
+          "bookmarked-places-list"
+        );
+
+        bookmarkListContainer.innerHTML = "";
+
+        bookmarkedPlaces.forEach(function (place) {
+          const listItem = document.createElement("li");
+          listItem.textContent = place;
+          bookmarkListContainer.appendChild(listItem);
+        });
+      }
+
+      window.onload = function () {
+        initializeBookmarks();
+        updateBookmarkedList();
+      };
+
+      function filterGallery() {
+        var searchInput = document
+          .getElementById("searchInput")
+          .value.toUpperCase();
+
+        var allWrappers = document.querySelectorAll("[class^='wrapper']");
+
+        allWrappers.forEach(function (wrapper) {
+          var title = wrapper.querySelector("h2").textContent.toUpperCase();
+          var content = wrapper
+            .querySelector(".content p")
+            .textContent.toUpperCase();
+
+          var shouldDisplay =
+            title.includes(searchInput) || content.includes(searchInput);
+
+          wrapper.style.display = shouldDisplay ? "block" : "none";
+        });
+      }
+    </script>
+    </div>
+  </body>
+</html>
